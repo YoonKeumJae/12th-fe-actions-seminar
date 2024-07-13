@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>멋쟁이사자처럼 영남대학교 12기 대표 이진우</p>
+        <p>멋쟁이사자처럼 영남대학교 12기 윤금재 </p>
         <a
           className="App-link"
           href="https://jinlee.kr/"
@@ -15,7 +15,7 @@ function App() {
         >
           블로그 구경하기
         </a>
-	  <a href="https://google.com">google</a>
+	<a href="https://google.com"> move to google </a>
       </header>
     </div>
   );

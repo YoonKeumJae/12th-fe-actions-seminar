@@ -1,0 +1,22 @@
+name: Check Build Possibility
+
+on: 
+  pull_request:
+    branchs: ["main"]
+
+jobs: 
+  # 1. Test with command `Build`
+  # Warning: each jobs are independent....
+  build-test:
+    runs-on: ubuntu-20.04
+    env: 
+      DISABLE_ESLINT_PLUGIN: true
+    steps: 
+      - uses: actions/checkout@v3 # pull feature branch
+      - uses: actions/setup-node@v3.5.1 # node version check
+        with: 
+          node-version: "21.2.0"
+      - name: Install dependencies
+        run: npm install
+      - name: Try build
+        run: npm run build
